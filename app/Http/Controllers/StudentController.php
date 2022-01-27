@@ -11,7 +11,10 @@ class StudentController extends Controller
     {
 
         // $students = student::all();
+
         $students= student::where('name','waqas')->get();
+        dd($students);
         return view('welcome',['students'=> $students]);
+
     }
 }
